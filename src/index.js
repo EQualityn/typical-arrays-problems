@@ -1,12 +1,13 @@
-
 exports.min = function min (array) {
-  return 0;
-}
+  return !array || array.length == 0 ? 0 : Math.min(...array);
+};
 
 exports.max = function max (array) {
-  return 0;
-}
+  return !array || array.length == 0 ? 0 : Math.max(...array);
+};
 
 exports.avg = function avg (array) {
-  return 0;
-}
+  const reducer = (sum, number) => sum + number;
+  return !array || array.length == 0 ? 0 : array.reduce(reducer) / array.length;
+};
+
